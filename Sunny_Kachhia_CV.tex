@@ -1,0 +1,217 @@
+%% start of file `template.tex'.
+%% Copyright 2015 Sunny Kachhia (sunny.kachhia@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Sunny}{Kachhia}
+\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{B-101 RadhaKrishna Park, Akota Garden Road, Akota, Vadodara, 390020}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+91 9880706075}                   % optional, remove / comment the line if not wanted
+\phone[mobile]{+91 9974291750}                  % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{sunny.kachhia@gmail.com}                               % optional, remove / comment the line if not wanted
+\homepage{www.github.com/sunnykachhia}                       % optional, remove / comment the line if not wanted
+\extrainfo{DOB: February 12, 1992}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\small{Undergraduate computer engineer completing the final year of a master's degree. Passionate about science, with strong technical, business, and interpersonal skills for working in a team and successfully completing a project.}
+
+\section{Work Experience}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+\item{\cventry{May 2014--Present}{Product Development Engineer}{Aindra Systems Pvt. Ltd.}{Bangalore}{}{\vspace{3pt}In this Computer Vision based startup I have been working on System Architecting, Web development (Django MVC Framework), API development (Hibernate, RESTEasy), Database Designing, Database Handling, Product Management (Android, iOS and WPF applications), Server Maintenance, Testing and Software Quality Assuarance. Lately I am also playing a role of a Team leader, Product Planner and hiring interns.}}
+
+\vspace{6pt}
+
+\item{\cventry{July 2012--May 2013}{Project Intern}{Shreeji Infosoft}{Vadodara}{}{\vspace{3pt}I was responsible for designing a System for Travel agents to manage online booking in different Branches. Developed a software application package for the tours and travels’ agencies which caters to the automation of all the activities carried in the agencies/organizations..}}
+
+\end{itemize}
+
+\section{Education}
+
+\vspace{5pt}
+
+\subsection{Academic Qualifications}
+
+\vspace{5pt}
+
+\begin{itemize}
+
+\item{\cventry{2013--2015}{M.Tech. in Computer Science and Engineering }{Nirma University}{Ahmedabad}{\textit{Predicted First Class}}{}}
+
+\vspace{3pt}
+
+\item{\cventry{2009--2013}{B.E. in Computer Engineering}{K.J. Institute of Engineering and Technology}{Vadodara}{\textit{Distinction}}{}}  % arguments 3 to 6 can be left empty
+
+\vspace{3pt}
+
+\item{\cventry{2000--2009}{SSC--HSC GSEB}{Vidyakunj High School}{Vadodara}{\textit{First Class including Maths, Physics and Chemistry}}{}}
+
+\end{itemize}
+
+\vspace{2pt}
+
+\subsection{Notable Projects}
+
+\vspace{5pt}
+
+\begin{itemize}
+
+\item{\textbf{Masters Project (Ongoing):} \textit{'Applications of Mobile Visual Identification'}
+
+\vspace{3pt}
+
+\small{I am part of a team developing a Face Recognition based Attendance system that can be used in organizations, hospitals and educational institutions to keep record of daily attendances of people. This ambitious project requires strong team-working skills and high technical ability. Given the role of product development engineer I am responsible for designing products, developing and delivering them on time and meet the specifications of the project.}}
+
+\newpage
+
+\item{\textbf{3rd year individual project:} \textit{'Artificial Neural Network Approach to Source Localisation in Radiation Portal Monitoring'}
+
+\vspace{3pt}
+
+\small{This challenging project took place over the entirety of my third year. It required excellent planning and organisational skills, and the ability to teach myself an entirely new and complex subject. The project was a success, with the system being able to localise a radioactive source down to $ 3 cm$ within a $ 600 m^3$ sensor array. This project has been suggested for publication by my supervisor.}}
+
+\vspace{6pt}
+
+\item{\textbf{Industrial Project with Leyland Motors Ltd:}\textit{'Development of a Facility to Ensure the Achievement of Torque Parameters for a Specific Axle Configuration'}
+
+\vspace{3pt}
+
+\small{In the 3rd year of my course I spent a week completing an industrial project for Leyland Motors. I worked with a team operating as consultants for a particular problem the company was having. During this project I was working in a professional environment, and co-operating with various managers and engineers to create a design that met the requirements of the problem.}}
+
+\end{itemize}
+
+\section{Technical and Personal skills}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+\item \textbf{Programming Languages:} Proficient in: C, Python, PHP, js, Core Java, J2EE, HTML, xHTML \\ Also basic ability with: C++, C\#, Shell Script, VBS, VB.NET, LaTeX.
+
+\vspace{6pt}
+
+\item \textbf{Programming Tools} Eclipse IDE(Luna, Kepler, Juno), Dev-C++ (Advanced), Notepad++ (Advanced), Adobe Dreamweaver (Intermediate),  TexMaker (Intermediate).
+% Sublime (Intermediate)
+
+\vspace{6pt}
+
+\item \textbf{Industry Software Skills:} Github (Advanced), Apache (Advanced), Jboss-EAP (Intermediate), Trello (Advanced), WinSCP (Advanced), PuTTY (Advanced), Most MS Office products including MS Project, MS Access and MS Visio.
+% Network Simulator 2 (Intermediate), Cisco Packet Tracer (Intermediate), Stanford Core NLP (Intermediate)
+
+\vspace{6pt}
+
+\item \textbf{General Business Skills:} Good presentation skills, Leadership skills, Can manage a team in Agile manner, Strategic Planner, Works well in a team.
+
+\vspace{6pt}
+
+\item \textbf{Other:} Good Problem solving skills, Can communicate well, Can write well organised and structured reports.
+
+\end{itemize}
+
+\section{Interests and extra-curricular activity}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+\item{Two times Winner of Sudoku competition at college level (2012 \& 2013).}
+
+\vspace{6pt}
+
+\item{Won 1st prize twice in group dance competition at college level (2011 \& 2013).}
+
+\vspace{6pt}
+
+\item{Have been an integral part of my college cricket team for straight 4 years.}
+
+\vspace{6pt}
+
+\item{Worked as Group Co-ordinator of Cultural as well as Technical Fests in college. My role in this included recruiting members, dividing tasks in teams, help organize the events, and spread awareness of the events \& programms among other colleges. One of the event for blood donation camp also got featured in local newspaper.}
+
+\vspace{6pt}
+
+\item{I was a member of Indian Society for Technical Education, student chapter. I hosted the inaugural event of ISTE in my college.}
+
+\vspace{6pt}
+
+\item{Other interest include calligraphy, which I am self-taught, Technology enthusiast, cricket lover, gaming and watching movies.}
+
+\end{itemize}
+
+\section{References}
+
+\vspace{6pt}
+ 
+\begin{itemize}
+
+\item{Up to 4 references available on request}
+
+\end{itemize}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
