@@ -1,59 +1,43 @@
-%% start of file `template.tex'.
-%% Copyright 2015 Sunny Kachhia (sunny.kachhia@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
-
-
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,letterpaper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % modern themes
 \moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{black}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
+\usepackage[margin=1cm,scale=0.75]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
-
+\AtBeginDocument{
+    \hypersetup{colorlinks,urlcolor=blue}
+}
+\renewcommand*{\namefont}{\fontsize{18}{20}\mdseries\upshape}
 \usepackage{import}
 
-\newcommand\faSkype{{\FA\symbol{"F17E}}}
-\newcommand*{\skypesocialsymbol}{\faSkype~}
-
-\RenewDocumentCommand{\social}{O{}O{}m}{%
-  \ifthenelse{\equal{#2}{}}%
-    {%
-      \ifthenelse{\equal{#1}{linkedin}}{\collectionadd[linkedin]{socials}{\protect\httplink[#3]{www.linkedin.com/in/#3}}}{}%
-      \ifthenelse{\equal{#1}{twitter}} {\collectionadd[twitter]{socials} {\protect\httplink[#3]{www.twitter.com/#3}}}    {}%
-      \ifthenelse{\equal{#1}{github}}  {\collectionadd[github]{socials}  {\protect\httplink[#3]{www.github.com/#3}}}     {}%
-      \ifthenelse{\equal{#1}{skype}}   {\collectionadd[skype]{socials}   {#3}}                                           {}%
-    }
-    {\collectionadd[#1]{socials}{\protect\httplink[#3]{#2}}}}
-
 % personal data
-\name{Sunny}{Kachhia}
-\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
-\address{B-101 RadhaKrishna Park, Akota Garden Road, Akota, Vadodara, 390020}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-\phone[mobile]{+91 9880706075}                   % optional, remove / comment the line if not wanted
-\phone[mobile]{+91 9974291750}                  % optional, remove / comment the line if not wanted
-\email{sunny.kachhia@gmail.com}                               % optional, remove / comment the line if not wanted
+\name{\textbf{Sunny}}{\textbf{Kachhia}}
+\address{503 Ansal Forte Apartment, Behind Central Silkboard, Hosur Road, Bangalore-560068}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+91-9880706075}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
-%\homepage{www.github.com/sunnykachhia}                       % optional, remove / comment the line if not wanted
+\email{sunny.kachhia@gmail.com}                               % optional, remove / comment the line if not wanted
+%\homepage{{http://www.wikibooks.org}{Wikibooks home}}                         % optional, remove / comment the line if not wanted
+
 \social[skype]{sunny.kachhia}
 \social[linkedin]{sunnykachhia}
 \social[github]{sunnykachhia}
+%\social[bitbucket]{sunnykachhia}
 \social[twitter]{sunnykachhia}
 \extrainfo{DOB: February 12, 1992}                 % optional, remove / comment the line if not wanted
+
+
 %\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{There are 10 kinds of people in the world: those who understand binary numerals, and those who don't. -Ian Stewart}                                 % optional, remove / comment the line if not wanted
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
 %\makeatletter
@@ -68,184 +52,259 @@
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
+\pagestyle{empty}
 \makecvtitle
 
-\small{Post graduate in Computer Science and Engineering, Full Stack Developer, passionate about programming, with strong interpersonal skills for working in a team and delivering end-to-end engineering product.}
+%\small{Graduate student of Computer Science seeking engineering and development roles in fast paced teams. Proven track record of delivering creative and end-to-end engineering solutions.}
+\small{Post graduate in Computer Science and Engineering, Full Stack Developer, passionate about programming, with
+strong interpersonal skills for working in a team and delivering end-to-end engineering product.}
 
-\section{Work Experience}
+\section{Professional Experience}
+
+\vspace{2pt}
+
+\subsection{\textbf{Aindra Systems Pvt. Ltd.} Bangalore, India \small{May 2014-current}}
+\textit{Senior Product Engineer}
+
+\begin{small}
+
+\begin{itemize}
+
+\item \textbf{Automated attendance system with face recognition and tracking}
+\begin{itemize}
+\item Smart Attendance is a product that provides a solution for tracking attendance and proof of attendance by using face recognition algorithms.
+\vspace{1pt}
+\item Led the design and development of an end-to-end cloud based system for attendance, automated through computer vision. Its a patent pending technology.
+\vspace{1pt}
+\item Designed a scalable architecture for the product that is now used in several places in India.
+\vspace{1pt}
+\item Single-handedly developed \textbf{SaaS based web-interface} for users to interact with the attendance system and generate reports; it uses their feedback to continuously improve accuracy of the model.
+\vspace{1pt}
+\item Designed and developed \textbf{android based mobile application} for users to capture and push attendance data. It has features of face tracking, face detection, face-cropping, geo-tagging, image compression, timestamp information and works offline as well. Also added automated bug reporting mechanism in the app.
+\vspace{1pt}
+\item Integrated google analytics with the web-interface and mobile application.
+\vspace{1pt}
+\item Implemented firewall security on production servers using iptable rules.
+\end{itemize}
+
+\vspace{2pt}
+
+\item \textbf{Productization of biometric face verification system}
+\begin{itemize}
+\item Designed and setup the entire architecture required for the product including servers, database models and API design.
+\vspace{1pt}
+\item \textbf{Development of Restful APIs} and \textbf{API based SaaS} to provide face recognition and face verification as a service to customers. It has multi layer authentication and authorization policies. Implemented using using \textbf{Hibernate, MySQL} tech stack and deployed on \textbf{JBOSS app server}.
+\vspace{1pt}
+\item Wrote \textbf{JSON and XML parsers} for front end and back end in order to read and understand the interfacing data.
+\end{itemize}
+
+\vspace{2pt}
+
+\item \textbf{Productization of automated detection of cancerous cells through staining and imaging}
+\begin{itemize}
+\item Developed an embedded system to automate the functions of a stepper motor in the auto stainer which is responsible for performing various staining processes involved in cervical cancer using blood samples. It includes rotary motion as well as linear motion of the motor and controlling its speed and velocity.
+\vspace{1pt}
+\item Built an intuitive touch based user interface in python using \textbf{Kivy framework} for the Auto stainer device.
+\vspace{1pt}
+\item Successfully showcased the prototype at International Knowledge Millennium Conference held at Hyderabad International Conventional Center, Hyderabad, India on 24th October, 2016, organized by IKP knowledge park.
+\vspace{1pt}
+\item Successfully built one more concept of Auto Stainer which is \textbf{IoT based} and can be controlled from a mobile device using bluetooth module.
+\end{itemize}
+
+\vspace{2pt}
+
+\item \textbf{Web based cancer cell annotation tool on the concept of telepathology}
+\begin{itemize}
+\item Designed and setup the entire architecture required for the product including servers, database models and API design.
+\vspace{1pt}
+\item Developed an intuitive UI for pathologists to analyze and mark cancerous cell on a Whole Slide Image captured from glass slides containing cervical sample.
+\vspace{1pt}
+\item This project has already received grants from Biotechnology Industry Research Assistance Council (BIRAC), Biotechnology Ignition Grant Scheme (BIG), Villgro Innovations Foundation and Indo-US Science and Technology Forum (IUSSTF).
+\end{itemize}
+
+\end{itemize}
+\end{small}
+
+\vspace{5pt}
+
+\subsection{\textbf{Shreeji Infosoft}, Vadodara, Gujarat, India \small{July 2012 - May 2013}}
+\textit{Project Intern}
+\begin {small}
+\begin{itemize}
+
+\item \textbf{Reduced the overhead of offline booking system}
+\begin{itemize}
+\item Designed and developed a System for Travel agents to manage online booking in different Branches.
+\vspace{1pt}
+\item Built a web-interface for users to plan their own travel and then do the necessary bookings. Separate login for travel agents to modify price chart, vehicle information, tour packages and availability of the tour plan.
+\vspace{1pt}
+\item created a future proof database, where travel agencies can add type of travel their organization serves; could be roadways, seaways or air transport.
+\vspace{1pt}
+\item We were able to develop a Web based solution for the tours and travels agencies which caters to the automation of all the activities carried in the agencies/organizations.
+\end{itemize}
+
+\end{itemize}
+\end{small}
+
+
+\section{Technical skills}
+
+\vspace{2pt}
+
+\begin{itemize}
+
+\item \textbf{Programming Languages:} \emph{Proficient in}: Java(30000 LOC), Python(15000 LOC), PHP(2000 LOC), MySQL, JavaScript(3000 LOC), HTML \\ \emph{Extensively used}: C(3000 LOC), C\#.NET(1000 LOC), CSS, Shell Script, VB Script, ASP.NET, TeX
+
+\vspace{1pt}
+
+\item \textbf{Frameworks:} Hibernate, JBOSS, Apache, Kivy, Django
+
+\vspace{1pt}
+
+\item \textbf{Libraries:} OpenCV, androidCV, numpy, tkinter, Google's geolocation API, gson, ACRA, Kivy
+
+\vspace{1pt}
+
+\item \textbf{OS \& IDEs:} Linux [Eclipse, Android Studio, Pycharm, vim, nano, gedit], Windows [Adobe Dreamweaver, Visual Studio, notepad++, Dev-C++, TexMaker], Mac
+
+\vspace{1pt}
+
+\item \textbf{Tools:} git, bitbucket, JIRA, Google Apps, Trello, WinSCP, PuTTY, FileZilla
+
+\vspace{1pt}
+
+\item \textbf{General Professional Skills:} Good presentation skills, Leadership skills, Can manage a team in Agile manner, Strategic Planner, Works well in a team.
+
+\vspace{1pt}
+
+\item \textbf{Other:} Good Problem solving skills, communication skills, Can write well organized and structured reports.
+
+\end{itemize}
+
+
+\section{Academia}
 
 \vspace{5pt}
 
 \begin{itemize}
 
-\item{\cventry{May 2014--Present}{Senior Product Engineer}{Aindra Systems Pvt. Ltd.}{Bangalore}{}{\vspace{3pt}
-	\begin{itemize}In this Computer Vision based startup I have been playing role of:
-\vspace{3pt}
-		\item \textbf{Developer:} System Architecting, API development (Hibernate, RESTEasy), Web development (Django MVC Framework), XML \& JSON parsing, Database Designing (MySQL), Android development.
-\vspace{5pt}
-		\item \textbf{Product Manager:} Designing Android, iOS and WPF applications, Server Maintenance, Testing and Software Quality Assurance. Also managed a team of 3 people.
-\vspace{5pt}
-		\item \textbf{Impact:} My contribution to the company has brought stabilization to the product and in turn increase the customer base.
-	\end{itemize}
-}}
+\item{\cventry{July 2013-May 2015}{M.Tech. in Computer Science and Engineering}{Nirma University}{Ahmedabad}{\textit{GPA:7.30/10.0}}{Courses: Advanced Algorithms, Artificial Intelligence, Advanced Compiler Design, Cloud Computing, Modern Databases, \\ Computer Architecture and Parallel Programming, Real Time Systems, Web Search and Mining, Distributed Parallel Systems}}
 
-\vspace{8pt}
+\vspace{2pt}
 
-\item{\cventry{July 2012--May 2013}{Project Intern}{Shreeji Infosoft}{Vadodara}{}{\vspace{3pt}I was responsible for designing a System for Travel agents to manage online booking in different Branches. It required immense skills to design the project (flow charts, activity diagrams, class diagram), create a future proof database, designing the look and feel of the website and writing project report.}}
+\item{\cventry{2009--2013}{B.E. in Computer Engineering}{Gujarat Technological University}{Ahmedabad}{\textit{GPA: 7.20/10.0}}{Courses: Advanced data structures and algorithms, Theory of computation, DBMS, Networks, OS, Compilers, \\ .NET technologies, JAVA technologies, OOPS, Mathematics, Computer Graphics}}  % arguments 3 to 6 can be left empty
 
 \end{itemize}
-
-\vspace{8pt}
-
-\section{Technical and Personal skills}
-
-\vspace{5pt}
-
-\begin{itemize}
-
-\item \textbf{Programming Languages:} Proficient in: Java(15000 LOC), Python(7000 LOC), PHP(2000 LOC), JavaScript(3000 LOC), C(3000 LOC), C\#.NET(1000 LOC), HTML5, CSS \\ Also basic ability with: Shell Script, VB Script, ASP.NET, LaTeX.
-
-\vspace{8pt}
-
-\item \textbf{Programming Tools} Eclipse IDE(Mars), Android Studio, PyCharm, Dev-C++, Notepad++, Texmaker, Adobe Dreamweaver (Intermediate), .
-% Sublime (Intermediate)
-
-\vspace{8pt}
-
-\item \textbf{Industry Software Skills:} LAMP, Bitbucket, Github(source code management and version controlling system), Apache, Jboss-EAP 6.3, Trello(Project Management tool), WinSCP, PuTTY, Most MS Office products including MS Project, MS Access and MS Visio.
-% Network Simulator 2 (Intermediate), Cisco Packet Tracer (Intermediate), Stanford Core NLP (Intermediate)
-
-\vspace{8pt}
-
-\item \textbf{General Business Skills:} Good presentation skills, Leadership skills, Can manage a team in Agile manner, Strategic Planner, Works well in a team.
-
-\vspace{8pt}
-
-\item \textbf{Other:} Good Problem solving skills, communication skills, Can write well organised and structured reports.
-
-\end{itemize}
-
-\newpage
-
-\section{Education}
-
-\vspace{3pt}
-
-\subsection{Academic Qualifications}
-
-\vspace{3pt}
-
-\begin{itemize}
-
-\item{\cventry{2013--2015}{M.Tech. in Computer Science and Engineering }{Nirma University}{Ahmedabad}{\textit{First Class}}{}}
-
-\vspace{3pt}
-
-\item{\cventry{2009--2013}{B.E. in Computer Engineering}{K.J. Institute of Engineering and Technology}{Vadodara}{\textit{Distinction}}{}}  % arguments 3 to 6 can be left empty
-
-\vspace{3pt}
-
-\item{\cventry{2000--2009}{SSC--HSC GSEB}{Vidyakunj High School}{Vadodara}{\textit{First Class including Maths, Physics and Chemistry}}{}}
-
-\end{itemize}
-
-\vspace{3pt}
+\vspace{2pt}
 
 \subsection{Tests}
-
-\vspace{3pt}
-
 \begin{itemize}
-
-\item{\textbf{GATE 2013 qualified with 97.27 percentile}}
-
+\item {\textbf{GATE 2013 qualified with 97.27 percentile}}
 \end{itemize}
 
-\vspace{8pt}
+\vspace{5pt}
+
 
 \subsection{Notable Projects}
 
-\vspace{3pt}
+\vspace{5pt}
 
 \begin{itemize}
 
-\item{\textbf{Masters project with Aindra Systems:} \textit{'Applications of Mobile Visual Identification'}
+\item{\textbf{Deployed and integrated Face recognition based attendance system for the following clients:}
+\vspace{1pt}
 
-\vspace{3pt}
+\small{
+\begin{itemize}
+\item Dusters Total Solutions Services Pvt Ltd (DTSS), Positive Shift, Labournet, AR Rail Vikas
+\end{itemize}}}
 
-\small{I was part of a team developing a Face Recognition based Attendance system that can be used in Enterprise, Healthcare and Educational institutions to keep record of daily attendances of people.}
+\vspace{5pt}
+
+\item{\textbf{Deployed and integrated Face verification based login system for the following clients:}
+\vspace{1pt}
+
+\small{
+\begin{itemize}
+\item CAP Workforce Development Institute (CAP WDI)
+\end{itemize}}}
+
+\vspace{5pt}
+
+\item{\textbf{Applications of Mobile Visual Identification (Master's project):}
+\\ \textit{'Automated attendance system with face recognition and tracking'}
+\\ Guide: Vipul Chudasama, Assistant Professor, Computer Engg. dept., Nirma University
+\vspace{1pt}
+
+\small{
+\begin{itemize}
+\item I was part of a team developing a Face Recognition based Attendance system that can be used in Enterprise, Health care and Educational institutions to keep record of daily attendances of people.
 \\ \textbf{ Build environment:} Django MVC 1.7 (Python, HTML, JavaScript, CSS), Java(Client), C++ \& PHP.
-}
-
-%\newpage
-\vspace{8pt}
-
-\item{\textbf{B.E. final year project with Shreeji Infosoft:} \textit{'Tours \& Travels Management system'}
-
-\vspace{3pt}
-
-\small{This challenging project took place over the entirety of my B.E. final year. We were able to develop a Web Application for the tours and travels agencies which caters to the automation of all the activities carried in the agencies/organizations.}
-\\ \textbf{ Build environment:} Visual Studio 2010 (C\#.NET, MS Visio, MS Access, SQL server 2008)
-}
-
-\vspace{8pt}
-
-\item{\textbf{Masters mini project:}\textit{'Hybrid Filtering Methods Applied in Web-Based Movie Recommendation System'}}
-
-\vspace{8pt}
-
-\item{\textbf{Masters mini project:}\textit{'Developed a Cluster environment for estimating communication rates in MPI'}}
-
-%\vspace{8pt}
-
-%\item{\textbf{1st semester Masters group project:}\textit{'Parallelized Graph coloring Algorithm using parallel architecture paradigm on LINUX based Cluster environment'}}
-
-\vspace{8pt}
-
-\item{\textbf{3rd year B.E. group project:}\textit{'Online Student Management System'}
-
-\vspace{3pt}
-
-\small{The objective was to ease the communication between students and faculties and improve sharing of notes, articles, publications, textbooks via web. Faculties can also upload video lectures, notices, results etc.}
-\\ \textbf{Build environment:} Adobe Dreamweaver(html, JavaScript, CSS, PHP)
-}
-
-\end{itemize}
+\end{itemize}}}
 
 \vspace{5pt}
 
-\section{Interests and extra-curricular activity}
+\item{\textbf{Tours \& Travels Management system (Bachelor's Project):}
+\\ \textit{'Reduced the overhead of offline booking system'}
+\\ Guide: Reeta Mishra, Assistant Professor, Computer Engg. dept., K.J.I.T
+\vspace{1pt}
+\small{
+\begin{itemize}
+\item Led a team of 3 to conduct a comprehensive survey and study of existing travel booking systems and problems faced by clients.
+\vspace{1pt}
+\item Built a web based solution and made travel booking convenient for users and also reduced lot of management activities and paper work done by the travel agencies.
+\\ \textbf{ Build environment:} Visual Studio 2010 (C\#.NET, MS Visio, MS Access, SQL server 2008)
+\end{itemize}}}
 
-\vspace{3pt}
+\vspace{5pt}
 
+\item{\textbf{Hybrid Filtering Methods Applied in Web-Based Movie Recommendation System (Master's mini project):}
+\\ \textit{'Comparative study on various filtering techniques and built a hybrid filtering technique based on benchmarking results'}}
+
+\vspace{5pt}
+
+\item{\textbf{Estimation of Communication rates in MPI (Master's mini project):}
+\\ \textit{'Developed a Cluster environment for estimating communication rates in message passing interface'}}
+
+\vspace{5pt}
+
+\item{\textbf{Online Student Management System (Bachelor's mini project):}
+\\ \textit{'A web portal for students and teachers to make information sharing faster and easily accessible'}
+
+\vspace{1pt}
+
+\small{
+\begin{itemize}
+\item The objective was to ease the communication between students and faculties and improve sharing of notes, articles, publications, textbooks via web. Faculties can also upload video lectures, notices, results etc.
+\\ \textbf{Build environment:} Adobe Dreamweaver(html, JavaScript, CSS, PHP)
+\end{itemize}}}
+
+\end{itemize}
+
+
+\section{Relevant interests, activities and achievements}
 \begin{itemize}
 
-\item{Two times Winner of Sudoku competition at college level (2012 \& 2013).}
-
-\vspace{5pt}
-
-\item{Won 1st prize twice in group dance competition at college level (2011 \& 2013).}
-
-\vspace{5pt}
-
-\item{Runner-up in MTech Premier League at Nirma University. Have been an integral part of my college cricket team for straight 4 years in B.E.}
-
-\vspace{5pt}
-
-\item{Worked as Group Co-ordinator of Cultural as well as Technical Festivals in college.}
-%My role in this included recruiting members, dividing tasks in teams, help organize the events, and spread awareness of the events \& programms among other colleges. One of the event for blood donation camp also got featured in local newspaper.}
-
-\vspace{5pt}
-
-\item{I was a member of Indian Society for Technical Education, student chapter. I hosted the inaugural event of ISTE in my college.}
-
-\vspace{5pt}
-
-\item{Other interest include calligraphy, which I am self-taught, solving puzzles \& riddles, Technology enthusiast, cricket lover, gaming and watching movies.}
-
+\begin{small}
+\item Won several coding events organized by Hacker Earth and also won hackathon that resulted in job offer.
+\vspace{1pt}
+\item Two times Winner of Sudoku competition at college level (2012 \& 2013).
+\vspace{1pt}
+\item Won 1st prize twice in group dance competition at college level (2011 \& 2013).
+\vspace{1pt}
+\item Runner-up in MTech Premier League at Nirma University. Have been an integral part of my college cricket team for straight 4 years in B.E.
+\vspace{1pt}
+\item Organized blood donation camp and technical seminars during undergraduate studies.
+\vspace{1pt}
+\item Worked as Group Co-ordinator of Cultural as well as Technical Festivals in college.
+\vspace{1pt}
+\item Member of Indian Society for Technical Education, student chapter. I hosted the inaugural event of ISTE in my UG college.
+\vspace{1pt}
+\item Other interest include calligraphy, which I am self-taught, solving puzzles \& riddles, Technology enthusiast, cricket lover, music lover, fitness conscious, violinist, gamer and movie freak.
+\end{small}
 \end{itemize}
+
 
 \section{References}
 
@@ -255,25 +314,4 @@
 
 \end{itemize}
 
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
-
-%-----       letter       ---------------------------------------------------------
-
 \end{document}
-
-
-%% end of file `template.tex'.
